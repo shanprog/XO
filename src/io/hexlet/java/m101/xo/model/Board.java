@@ -17,7 +17,7 @@ public class Board {
             return null;
     }
 
-    boolean setFigure(final int x, final int y, final Figure figure) {
+    public boolean setFigure(final int x, final int y, final Figure figure) {
 
         if (checkCoordinate(x) && checkCoordinate(y)) {
             figures[x][y] = figure;
