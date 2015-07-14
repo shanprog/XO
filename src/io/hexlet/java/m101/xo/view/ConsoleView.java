@@ -1,20 +1,23 @@
 package io.hexlet.java.m101.xo.view;
 
-import io.hexlet.java.m101.xo.controller.Game;
+import io.hexlet.java.m101.xo.controller.GameController;
 
 public class ConsoleView {
 
-    protected final Game game;
+    protected final GameController gameController;
 
-    public ConsoleView(Game game) {
-        this.game = game;
+    public ConsoleView(GameController gameController) {
+
+        assert gameController != null;
+
+        this.gameController = gameController;
     }
 
     public void showGameName() {
-        System.out.println(game.getGameName());
+        System.out.println(gameController.getGameName());
     }
 
     public void showPlayersName() {
-        System.out.println(game.getPlayers());
+        System.out.println(gameController.getPlayers());
     }
 }

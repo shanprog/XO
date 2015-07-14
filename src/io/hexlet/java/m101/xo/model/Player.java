@@ -3,9 +3,12 @@ package io.hexlet.java.m101.xo.model;
 public class Player {
 
     private final String name;
-    private final String figure;
+    private final Figure figure;
 
-    public Player(String name, String figure) {
+    public Player(String name, Figure figure) {
+        assert name != null;
+        assert figure != null;
+
         this.name = name;
         this.figure = figure;
     }
@@ -14,7 +17,7 @@ public class Player {
         return name;
     }
 
-    public String getFigure() {
+    public Figure getFigure() {
         return figure;
     }
 }
