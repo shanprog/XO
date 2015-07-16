@@ -4,8 +4,8 @@ import io.hexlet.java.m101.xo.controller.GameController;
 import io.hexlet.java.m101.xo.model.Board;
 import io.hexlet.java.m101.xo.model.Figure;
 import io.hexlet.java.m101.xo.model.Player;
+import io.hexlet.java.m101.xo.view.AdvConsoleView;
 import io.hexlet.java.m101.xo.view.ConsoleView;
-import io.hexlet.java.m101.xo.view.MenuView;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,9 +16,11 @@ public class Main {
         final ConsoleView consoleView = new ConsoleView(gameController);
 //        final AdvConsoleView advConsoleView = new AdvConsoleView(gameController);
 //
+        System.out.println("Current player is " + gameController.currentPlayer().getName());
 
-        MenuView menu = new MenuView();
-        menu.showMenuWithResult();
+
+//        MenuView menu = new MenuView();
+//        menu.showMenuWithResult();
 //        startGame(consoleView);
     }
 
@@ -26,6 +28,6 @@ public class Main {
         consoleView.showGameName();
         consoleView.showPlayers();
         consoleView.showBoard();
-        consoleView.start();
+//        consoleView.start();
     }
 }
